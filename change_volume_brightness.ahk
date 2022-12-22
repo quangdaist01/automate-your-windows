@@ -1,5 +1,5 @@
 ﻿; Variables
-Increments 			:= 13 ; < lower for a more granular change, higher for larger jump in brightness
+Increments 			:= 10 ; < lower for a more granular change, higher for larger jump in brightness
 CurrentBrightness 	:= GetCurrentBrightNess()
 
 ; Change brightness
