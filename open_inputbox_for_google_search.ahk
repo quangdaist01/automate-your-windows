@@ -11,7 +11,27 @@ e :=	["+","%25", "%22", "%23", "%26"
  , "%60", "%7B", "%7C", "%7D", "%7E"]
 
 
-#s::
+#j::
+;Clipboard := "" ; Empty the clipboard
+;Send, ^c
+;ClipWait, 0.25
+;if ErrorLevel
+;{
+;    InputBox, Search, Google Search,,,250, 100
+;    if !ErrorLevel
+;    {
+;        For i, u in toEncode		; check/replace loop for unsafe chars
+;        StringReplace, Search, Search, %	u, %	e[i], All
+;        Run, http://www.google.com/search?q=%Search% ;else use Google search
+;    }
+;    return
+;}
+;;MsgBox, clipboard = %Clipboard%
+;Search := Clipboard
+;For i, u in toEncode		; check/replace loop for unsafe chars
+;StringReplace, Search, Search, %	u, %	e[i], All
+;Run, http://www.google.com/search?q=%Search% ;else use Google search
+
 InputBox, Search, Google Search,,,250, 100
 if !ErrorLevel
 {
