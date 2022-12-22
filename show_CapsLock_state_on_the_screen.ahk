@@ -13,7 +13,7 @@ SetCapsLockState % !GetKeyState("CapsLock", "T") ; requires [v1.1.30+]
 isCapsLockOn := GetKeyState("CapsLock", "T") ; requires [v1.1.30+]
 if isCapsLockOn
 {
-    Gui, Show, x730 y450 NoActivate  ; NoActivate avoids deactivating the currently active window.
+    Gui, Show, xCenter yCenter NoActivate  ; NoActivate avoids deactivating the currently active window.
 }
 else
     Gui, Hide
