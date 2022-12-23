@@ -20,12 +20,27 @@ return
 ; switch tabs
 :?*:[::
 SwitchToTyping("english")
+WinGetTitle, Title, A
+Text := "Colaboratory"
+If InStr(Title, Text)
+{
+    Send, [
+    return
+}
+
 Send, ^+{Tab}
 return
 
 ; switch tabs
 :?*:]::
 SwitchToTyping("english")
+WinGetTitle, Title, A
+Text := "Colaboratory"
+If InStr(Title, Text)
+{
+    Send, ]
+    return
+}
+
 Send, ^{Tab}
 return
-
