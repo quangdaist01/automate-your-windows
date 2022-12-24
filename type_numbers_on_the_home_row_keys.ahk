@@ -7,6 +7,9 @@ Gui, Add, Text, vMyText cRed, Type numbers ; XX & YY serve to auto-size the wind
 WinSet, TransColor, %CustomColor% 120
 return
 
+; (Edge)
+; [ / ] (below the 'minus' and 'equal' keys)
+; Why should I use 2 or 3 keys to do such common feature?
 !'::
     Suspend Permit
     Gui, Show, x650 y420 NoActivate  ; NoActivate avoids deactivating the currently active window.

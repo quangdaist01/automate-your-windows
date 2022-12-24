@@ -12,6 +12,9 @@ Suspend On
 
 return
 
+;; Scroll on vertical sections of the screen
+;;; Win + ;
+;;;; Avoid using the mouse, especially when scrolling facebook chat list and messages
 #;::
     Suspend Permit
 

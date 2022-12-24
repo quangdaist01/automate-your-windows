@@ -1,6 +1,7 @@
 ﻿#If not WinActive("ahk_exe Adobe Premiere Pro.exe")
 
-; move active window 100 pixels right
+;; Move the current window
+;;; Ctrl + Shift + L/R/U/D
 ~^+l::
 wingetpos x, y,,, A   ; get coordinates of the active window
 x += 100			  ; add 100 to the x coordinate

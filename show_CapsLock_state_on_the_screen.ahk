@@ -8,6 +8,9 @@ WinSet, TransColor, %CustomColor% 150
 return
 
 
+;; Show CapsLock state on the screen
+;;; CapsLock
+;;;; I want to know when CapsLock is on so I can turn it off before navigating (I use Vim a lot)
 CapsLock::
 SetCapsLockState % !GetKeyState("CapsLock", "T") ; requires [v1.1.30+]
 isCapsLockOn := GetKeyState("CapsLock", "T") ; requires [v1.1.30+]

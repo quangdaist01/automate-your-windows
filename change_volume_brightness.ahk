@@ -2,7 +2,9 @@
 Increments 			:= 10 ; < lower for a more granular change, higher for larger jump in brightness
 CurrentBrightness 	:= GetCurrentBrightNess()
 
-; Change brightness
+;; Change brightness
+;;; RCtrl + L/R
+;;;; I don't want to use mouse to control the brightness or rely on Fn key on my laptop.
 RCtrl & Left::
 ChangeBrightness( CurrentBrightness -= Increments ) ; decrease brightness
 return
@@ -11,7 +13,9 @@ RCtrl & Right::
 ChangeBrightness( CurrentBrightness += Increments ) ; increase brightness
 return
 
-; Change volumn
+;; Change volume
+;;; RCtrl + U/D
+;;;; Same as above
 RCtrl & Down::
 Send {Volume_Down 5} ;Alt/Left Arrow to reduce volume
 return

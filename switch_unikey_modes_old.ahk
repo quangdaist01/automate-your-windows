@@ -1,23 +1,26 @@
 ﻿CoordMode, Pixel, Screen
 #inputlevel 1
 
+
 ; Switch between 2 typing modes in Unikey
 SwitchToTyping(mode)
 {
-    PixelSearch, FoundX, FoundY, 1831, 1043, 1866, 1079, 0xE6D2D2, 0, Fast RGB
+;    PixelSearch, FoundX, FoundY, 1831, 1043, 1866, 1079, 0xCBCBF2, 0, Fast RGB
+;    PixelSearch, FoundX, FoundY, 1831, 1043, 1866, 1079, 0xCBCBF2, 0, Fast RGB
+    ; Find the RED color
+    redColor := "0xCCCCFF"
+    PixelGetColor, color, 1853, 1065
     if (mode == "vietnamese")
     {
-    If ErrorLevel
-        {
+;        If ErrorLevel
+        if (color != redColor)
             Send !z
-        }
     }
     if (mode == "english")
     {
-        If ErrorLevel = 0
-        {
+;        If ErrorLevel = 0
+        if (color == redColor)
             Send !z
-        }
     }
 
     ; some windows also trigger Alt+Z hotkey so I will try do "undo" that
@@ -25,9 +28,7 @@ SwitchToTyping(mode)
     if (exeName = "WINWORD.EXE")
         Send, {ESC 2}
     else if (exeName = "anki.exe")
-    {
         Send, {BS}
-    }
     else if (exeName = "POWERPNT.EXE")
         Send, {ESC}
 }

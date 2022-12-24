@@ -4,6 +4,9 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #If WinActive("ahk_exe msedge.exe") or WinActive("ahk_exe foxitreader.exe")
+;; (Edge) Switch tabs in Edge
+;;; [ / ] (below the 'minus' and 'equal' keys)
+;;;; Why should I use 2 or 3 keys to use such common feature?
 ^PgUp::
 Send, ^+{Tab}
 return

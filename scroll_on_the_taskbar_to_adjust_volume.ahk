@@ -1,4 +1,6 @@
 ﻿#If MouseIsOver("ahk_class Shell_TrayWnd")
+;; Scroll on the taskbar to adjust volume
+;;; None
 WheelUp::
 Send {Volume_Up}
 Send {Volume_Up}
